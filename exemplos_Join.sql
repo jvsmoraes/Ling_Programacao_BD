@@ -63,3 +63,10 @@ c.uf = 'rj' and
 pr.desc_prod = "Chapa de Aço" and
 p.prazo_entr > 15
 order by c.nome_cli;
+
+-- Mostre os nomes dos vendedores que venderam chapas de aço em
+
+select v.nome_vend from vendedor v, pedido p, produto pr, item_pedido ip where
+v.cod_vend = p.cod_vend and
+p.num_ped = ip.num_ped and
+
